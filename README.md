@@ -3,9 +3,9 @@
 ## Usage
 
 ```sh
-sudo docker run -v `pwd`:/work --rm kaosf/archffmpeg /usr/sbin/ffmpeg \
+sudo docker run -u $(id -u $USER):$(id -g $USER) -v `pwd`:/work --rm \
+  kaosf/archffmpeg /usr/sbin/ffmpeg \
   -i /work/src.mp4 SOME_OPTIONS /work/dst.mp4
-sudo chown `whoami`: dst.mp4
 ```
 
 ## License
