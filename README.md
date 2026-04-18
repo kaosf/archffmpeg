@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-sudo docker run -u $(id -u $USER):$(id -g $USER) -v `pwd`:/a --rm \
+sudo docker container run -u $(id -u):$(id -g) -v $PWD:/a --rm \
   kaosf/archffmpeg -i /a/src.mp4 SOME_OPTIONS /a/dst.mp4
 ```
 
