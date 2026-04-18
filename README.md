@@ -3,8 +3,8 @@
 ## Usage
 
 ```sh
-sudo docker container run -u $(id -u):$(id -g) -v $PWD:/a --rm \
-  kaosf/archffmpeg -i /a/src.mp4 SOME_OPTIONS /a/dst.mp4
+sudo docker container run -u $(id -u):$(id -g) -v $PWD:/w --rm \
+  kaosf/archffmpeg -i src.mp4 SOME_OPTIONS dst.mp4
 ```
 
 ## License
